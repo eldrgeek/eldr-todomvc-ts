@@ -6,7 +6,12 @@ export const storage = {
     localStorage.setItem('todos', JSON.stringify(todos));
   },
   getTodos(): { [id: string]: Todo } {
-    return JSON.parse(localStorage.getItem('todos') || '{}');
+    try {
+      const data = JSON.parse(localStorage.getItem('todos') || '{}');
+      return data;
+    } catch (e) {
+      return {};
+    }
   },
 };
 

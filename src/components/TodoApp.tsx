@@ -13,7 +13,7 @@ const TodoApp: React.FC = () => {
         <h1>todos</h1>
         <input
           className="new-todo"
-          placeholder="What needs to be done?"
+          placeholder="What do you want to do?"
           value={state.newTodoTitle}
           onChange={event =>
             actions.changeNewTodoTitle(event.currentTarget.value)
@@ -25,7 +25,7 @@ const TodoApp: React.FC = () => {
           autoFocus={true}
         />
       </header>
-      <div>this is a div</div>
+
       <section className="main">
         <input
           id="toggle-all"
